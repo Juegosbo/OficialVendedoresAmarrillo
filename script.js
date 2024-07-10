@@ -1,6 +1,6 @@
 function getNextEventTime() {
     const now = new Date();
-    let eventTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 20, 0, 0);
+    let eventTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 22, 0, 0);
 
     if (now >= eventTime) {
         eventTime.setDate(eventTime.getDate() + 1);
