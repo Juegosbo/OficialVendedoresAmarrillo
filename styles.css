@@ -19,6 +19,7 @@ header h1 {
     font-size: 3em;
     color: #ff4081;
     margin: 0;
+    animation: bounce 2s infinite;
 }
 
 header h2 {
@@ -40,18 +41,18 @@ main {
     align-items: center;
 }
 
-.informacion {
+.informacion, .contador {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     width: 80%;
+    text-align: center;
 }
 
 .informacion h2, .informacion h3 {
     color: #333;
-    text-align: center;
 }
 
 .informacion p, .informacion ul {
@@ -68,47 +69,15 @@ main {
     margin: 5px 0;
 }
 
-.contador {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    width: 80%;
-    text-align: center;
-}
-
 .contador h2 {
-    font-size: 1em;
-    color: #333;
-}
-
-#countdown {
-    font-size: 2em; /* Tamaño del contador en pantallas grandes */
+    font-size: 2em;
     color: #ff4081;
 }
 
-/* Media query para dispositivos móviles */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    header h2 {
-        font-size: 1.5em;
-    }
-
-    #countdown {
-        font-size: 1.5em; /* Tamaño del contador en dispositivos móviles */
-    }
-
-    .informacion p, .informacion ul {
-        font-size: 1em;
-    }
-
-    .contador h2 {
-        font-size: 1.5em;
-    }
+#countdown {
+    font-size: 2em;
+    color: #ff4081;
+    animation: pulse 1s infinite;
 }
 
 .vendedores {
@@ -116,7 +85,7 @@ main {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    width: 80%;
+    width: 100%;
 }
 
 .vendedor {
@@ -127,18 +96,19 @@ main {
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    transition: transform 0.2s, background-color 0.3s;
 }
 
 .vendedor:hover {
     transform: scale(1.05);
+    background-color: #ff4081;
+    color: white;
 }
 
 .vendedor h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
     color: #333;
-    font-family: 'Times New Roman', sans-serif; /* Aplica la fuente Impact */
 }
 
 .vendedor button {
@@ -162,4 +132,55 @@ footer {
     text-align: center;
     padding: 10px 0;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header h2 {
+        font-size: 1.5em;
+    }
+
+    #countdown {
+        font-size: 1.5em;
+    }
+
+    .informacion p, .informacion ul {
+        font-size: 1em;
+    }
+
+    .contador h2 {
+        font-size: 1.5em;
+    }
+
+    .vendedor {
+        width: 100%;
+    }
+}
+
+/* Animaciones */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
