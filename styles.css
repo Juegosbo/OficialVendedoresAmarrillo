@@ -71,12 +71,12 @@ main {
 
 .contador h2 {
     font-size: 2em;
-    color: #ff4081;
+    color: #ff581b;
 }
 
 #countdown {
     font-size: 2em;
-    color: #ff4081;
+    color: #1c500d;
     animation: pulse 1s infinite;
 }
 
@@ -93,7 +93,7 @@ main {
     padding: 20px;
     text-align: center;
     width: 200px;
-    background: linear-gradient(135deg, #ff4081, #ff80ab);
+    background: linear-gradient(135deg, #40f1ff, #ff80ab);
     color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
