@@ -1,6 +1,6 @@
 function getNextEventTime() {
     const now = new Date();
-    let eventTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 22, 0, 0); // Cambiado a 22:00 PM
+    let eventTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 20, 0, 0); // Cambiado a 22:00 PM
 
     if (now >= eventTime) {
         eventTime.setDate(eventTime.getDate() + 1);
