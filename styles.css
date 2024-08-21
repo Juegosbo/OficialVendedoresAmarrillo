@@ -96,7 +96,7 @@ main {
     width: 100%;
     max-width: 250px;
     background: linear-gradient(135deg, #40f1ff, #ff80ab);
-    color: white;
+    color: black;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, background-color 0.3s;
@@ -114,8 +114,8 @@ main {
 
 .vendedor button {
     display: block;
-    background-color: #25D366;
-    color: white;
+    background-color: #005520;
+    color: fff4fa;
     border: none;
     padding: 10px;
     margin: 5px 0;
